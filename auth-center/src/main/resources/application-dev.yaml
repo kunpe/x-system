@@ -1,0 +1,30 @@
+
+server:
+  port: 8081
+spring:
+  application:
+    name: auth-center
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///auth
+  main:
+    allow-bean-definition-overriding: true # 允许Spring默认bean
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    mode: HTML
+
+
+logging:
+  level:
+    spring: debug
+    dev.kun: debug
+    org:
+      apache:
+        ibatis: debug
